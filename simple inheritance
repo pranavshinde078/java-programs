@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+
+class Inheritance {
+    int num1;      
+    int num2;
+    int result;
+
+    public void getInput() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter first number:");
+        num1 = sc.nextInt();
+
+        System.out.println("Enter second number:");
+        num2 = sc.nextInt();
+
+        
+    }
+
+    public int add(int a, int b) {
+        result = a + b;
+        return result;
+    }
+}
+
+
+class Addition extends Inheritance {
+    public int showAdd() {
+        getInput();  
+        return add(num1, num2);  
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Addition obj = new Addition();
+        int sum = obj.showAdd();
+        System.out.println("The addition is: " + sum);
+    }
+}
