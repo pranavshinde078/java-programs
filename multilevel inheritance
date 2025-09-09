@@ -1,0 +1,28 @@
+class Pranav{
+    void details1(){
+        System.out.println("name : Pranav");
+    }
+}
+class Viraj extends Pranav{
+    void details2(){
+        System.out.println("name : viraj");
+        
+    }
+}
+class Arnav extends Viraj {
+    void details3(){
+        System.out.println("name : arnav");
+        
+    }
+}
+public class Minheritance{
+    public static void main(String[] args) {
+        Arnav d=new Arnav();
+        d.details1();
+        d.details2();
+        d.details3();
+        
+
+    }
+}
+
